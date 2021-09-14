@@ -1,0 +1,60 @@
+col_penal = {
+	icon = 15
+
+	potential = {
+		has_modifier = penal_colony
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+
+	planet_modifier = {	
+		job_criminal_per_pop = 0.1 # ...some criminals refuse to work
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			happiness_planet <= 0.5
+			happiness_planet > 0.4
+		}
+		modifier = {
+			planet_stability_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			happiness_planet <= 0.4
+			happiness_planet > 0.3
+		}
+		modifier = {
+			planet_stability_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			happiness_planet <= 0.3
+			happiness_planet > 0.2
+		}
+		modifier = {
+			planet_stability_add = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			happiness_planet <= 0.2
+			happiness_planet > 0.1
+		}
+		modifier = {
+			planet_stability_add = 8
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			happiness_planet <= 0.1
+		}
+		modifier = {
+			planet_stability_add = 10
+		}
+	}
+}
