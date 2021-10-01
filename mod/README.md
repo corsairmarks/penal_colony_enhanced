@@ -4,7 +4,7 @@ Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds b
 
 # Changes
 
-Alters Penal Colonies to have a focus on non-research jobs as well as bonuses to stability for lower happiness.  Additionally, there is a new capital building for Penal Colonies and a special job provided only by this building - the Warden.  Wardens increase stability at the expense of non-ruler happiness.
+Alters Penal Colonies to have a focus on non-research jobs as well as bonuses to stability for _lower_ happiness.  Additionally, there is a new capital building for Penal Colonies and a special job provided only by this building - the Warden.  Wardens increase stability at the expense of non-ruler happiness.
 
 ## Compatibility
 

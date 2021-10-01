@@ -1,5 +1,5 @@
 col_penal = {
-	icon = 15
+	icon = GFX_colony_type_penal
 
 	potential = {
 		has_modifier = penal_colony

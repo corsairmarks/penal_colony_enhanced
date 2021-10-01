@@ -139,7 +139,7 @@ building_penal_colony_administration = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}
 		}
 		modifier = {
@@ -344,7 +344,7 @@ building_penal_colony_complex = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}
 		}
 		modifier = {
@@ -561,7 +561,7 @@ building_penal_colony_enclave = {
 		potential = {
 			exists = owner
 			owner = {
-				has_non_swapped_tradition = tr_domination_imperious_architecture
+				has_active_tradition = tr_domination_imperious_architecture
 			}
 		}
 		modifier = {
