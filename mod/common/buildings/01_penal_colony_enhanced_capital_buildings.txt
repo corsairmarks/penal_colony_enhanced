@@ -16,6 +16,7 @@ building_penal_colony_barracks = {
 	category = government
 
 	potential = {
+		has_designation = col_penal
 		has_modifier = penal_colony
 	}
 
@@ -27,6 +28,13 @@ building_penal_colony_barracks = {
 		building_slave_capital
 		building_ancient_control_center
 		building_ancient_palace
+	}
+
+	destroy_trigger = {
+		NAND = {
+			has_designation = col_penal
+			has_modifier = penal_colony
+		}
 	}
 
 	planet_modifier = {
@@ -98,6 +106,7 @@ building_penal_colony_administration = {
 	category = government
 
 	potential = {
+		has_designation = col_penal
 		has_modifier = penal_colony
 	}
 
@@ -109,6 +118,13 @@ building_penal_colony_administration = {
 		building_slave_capital
 		building_ancient_control_center
 		building_ancient_palace
+	}
+
+	destroy_trigger = {
+		NAND = {
+			has_designation = col_penal
+			has_modifier = penal_colony
+		}
 	}
 
 	allow = {
@@ -221,8 +237,8 @@ building_penal_colony_administration = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -299,15 +315,8 @@ building_penal_colony_complex = {
 	category = government
 
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_fallen_empire = no
-		}
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
+		has_designation = col_penal
+		has_modifier = penal_colony
 	}
 
 	allow = {
@@ -322,6 +331,13 @@ building_penal_colony_complex = {
 		building_slave_major_capital
 		building_ancient_control_center
 		building_ancient_palace
+	}
+
+	destroy_trigger = {
+		NAND = {
+			has_designation = col_penal
+			has_modifier = penal_colony
+		}
 	}
 
 	prerequisites = {
@@ -426,8 +442,8 @@ building_penal_colony_complex = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -437,8 +453,8 @@ building_penal_colony_complex = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -523,6 +539,7 @@ building_penal_colony_enclave = {
 	category = government
 
 	potential = {
+		has_designation = col_penal
 		has_modifier = penal_colony
 	}
 
@@ -535,6 +552,13 @@ building_penal_colony_enclave = {
 		building_slave_major_capital
 		building_ancient_control_center
 		building_ancient_palace
+	}
+
+	destroy_trigger = {
+		NAND = {
+			has_designation = col_penal
+			has_modifier = penal_colony
+		}
 	}
 
 	allow = {
@@ -650,8 +674,8 @@ building_penal_colony_enclave = {
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -661,8 +685,8 @@ building_penal_colony_enclave = {
 			owner = { has_technology = tech_capital_productivity_2 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
@@ -672,8 +696,8 @@ building_penal_colony_enclave = {
 			owner = { has_technology = tech_capital_productivity_3 }
 		}
 		modifier = {
-			planet_jobs_upkeep_mult = 0.1
-			planet_jobs_produces_mult = 0.1
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
 		}
 	}
 
