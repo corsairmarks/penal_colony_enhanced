@@ -16,3 +16,8 @@
  mod_job_warden_per_pop: "§G+1§! $job_warden$ Job per $VALUE$ Pops"
  mod_job_warden_per_pop_short: "\n§G+1§! £mod_job_warden_add£ per $VALUE$ £pop£"
  mod_job_criminal_per_pop: "§G+1§! $job_criminal$ Job per $VALUE$ Pops"
+ pop_cat_inmate: "Inmate"
+ pop_cat_inmate_plural: "Inmates"
+ pop_cat_inmate_desc: "These pops are prisoners on a prison planet."
+ pop_category_inmates: "$pop_cat_inmate$ $SPECIES_RIGHT_LIVING_STANDARDS$"
+ mod_pop_cat_inmate_happiness: "$pop_cat_inmate$ $MOD_POP_HAPPINESS$"

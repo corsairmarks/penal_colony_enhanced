@@ -1,0 +1,172 @@
+inmate = {
+	rank = 0
+	clothes_texture_index = 2
+	display_category = criminal
+	change_job_threshold = 1.15
+	demotion_time = 0
+	display_unemployment = no
+	assign_to_pop = {
+		is_sapient = yes
+		NOR = {
+			is_pop_category = ruler
+			has_job = enforcer
+			has_job = telepath
+			has_job = soldier
+		}
+		exists = planet
+		planet = {
+			OR = {
+				has_designation = col_penal
+				has_modifier = penal_colony
+			}
+		}
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	weight = { weight = 13 }
+	# these resettlement settings attempt to duplicate the base costs for their respective categories
+	allow_resettlement = { NOT = { is_pop_category = criminal } }
+	resettlement_cost = {
+		trigger = { is_pop_category = specialist }
+		energy = 250
+	}
+	resettlement_cost = {
+		trigger = { is_pop_category = worker }
+		energy = 100
+	}
+	resettlement_cost = {
+		trigger = { is_pop_category = slave }
+		energy = 50
+	}
+	resettlement_cost = {
+		trigger = {
+			is_pop_category = specialist
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_corvee_system } }
+		}
+		influence = 25
+	}
+	resettlement_cost = {
+		trigger = {
+			is_pop_category = worker
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_corvee_system } }
+		}
+		influence = 10
+	}
+	pop_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.5
+		pop_happiness = -0.25
+		pop_political_power = -0.75
+		pop_housing_usage_base = 0.75
+		pop_amenities_usage_base = 0.75
+	}
+	triggered_planet_modifier = {
+		potential = { can_assemble_budding_pop = yes }
+		planet_pop_assembly_organic_add = @plantoid_budding_rate
+	}
+	resources = {
+		category = pop_category_inmates
+
+		# Luxuries Upkeep (based on built-in worker strata)
+		upkeep = {
+			trigger = { has_shared_burden_living_standard_type = yes }
+			consumer_goods = @living_standard_luxuries_shared_burden
+		}
+		upkeep = {
+			trigger = { has_very_high_living_standard_type = yes }
+			consumer_goods = @living_standard_luxuries_very_high
+		}
+		upkeep = {
+			trigger = { has_high_living_standard_type = yes }
+			consumer_goods = @living_standard_luxuries_high
+		}
+		upkeep = {
+			trigger = {
+				OR = {
+					has_normal_living_standard_type = yes
+					has_academic_living_standard_type = yes
+					has_decadent_living_standard_type = yes
+				}
+			}
+			consumer_goods = @living_standard_luxuries_normal
+		}
+		upkeep = {
+			trigger = { has_stratified_living_standard_type = yes }
+			consumer_goods = @living_standard_luxuries_low
+		}
+		upkeep = {
+			trigger = { has_low_living_standard_type = yes }
+			consumer_goods = @living_standard_luxuries_very_low
+		}
+
+		# Organic Upkeep
+		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_phototrophic = no
+				is_lithoid = no
+				OR = {
+					has_very_high_living_standard_type = yes
+					has_high_living_standard_type = yes
+				}
+			}
+			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = { is_phototrophic = yes }
+			food = @living_standard_phototrophic_normal
+		}
+
+		# Lithoid Upkeep
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = yes
+			}
+			minerals = @living_standard_food_normal
+		}
+
+		# Robotic Upkeep
+		upkeep = {
+			trigger = { is_robotic_species = yes }
+			energy = @living_standard_energy_normal
+		}
+
+		# Lithoid Trait Production
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				has_trait = trait_lithoid_scintillating
+			}
+			rare_crystals = @lithoid_trait_resource_production
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				has_trait = trait_lithoid_gaseous_byproducts
+			}
+			exotic_gases = @lithoid_trait_resource_production
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				has_trait = trait_lithoid_volatile_excretions
+			}
+			volatile_motes = @lithoid_trait_resource_production
+		}
+
+		# Police State Production
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_police_state }
+			}
+			unity = 1
+		}
+	}
+}
