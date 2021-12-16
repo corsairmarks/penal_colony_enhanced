@@ -1,17 +1,14 @@
 decision_penal_colony = {
 	owned_planets_only = yes
-
 	prerequisites = {
 		"tech_penal_colonies"
 	}
-
 	resources = {
 		category = decisions
 		cost = {
 			influence = 100
 		}
 	}
-
 	potential = {
 		is_capital = no
 		NOR = {
@@ -25,23 +22,17 @@ decision_penal_colony = {
 			NOT = { any_owned_planet = { has_modifier = penal_colony } }
 		}
 	}
-
 	allow = {
 		planet_size >= 15
 	}
-
 	effect = {
-		add_modifier = {
-			modifier = penal_colony
-			days = -1
-		}
+		add_modifier = { modifier = penal_colony }
 		hidden_effect = {
 			set_colony_type = col_penal
 			convert_capital_to_penal_capital = yes
 			validate_planet_buildings_and_districts = yes
 		}
 	}
-
 	ai_weight = {
 		weight = 0
 	}
