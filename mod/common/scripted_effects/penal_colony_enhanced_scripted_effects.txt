@@ -1,4 +1,4 @@
-# THIS = planet
+# this = planet
 convert_capital_to_penal_capital = {
 	if = {
 		limit = { has_building = building_colony_shelter }
