@@ -1,14 +1,14 @@
 inmate = {
 	rank = 0
 	clothes_texture_index = 2
-	display_category = criminal
+	display_category = worker
 	change_job_threshold = 1.15
 	demotion_time = 0
 	display_unemployment = no
 	assign_to_pop = {
 		is_sapient = yes
 		NOR = {
-			is_pop_category = ruler
+			has_job_category = ruler
 			has_job = enforcer
 			has_job = telepath
 			has_job = soldier
@@ -25,22 +25,22 @@ inmate = {
 	}
 	weight = { weight = 13 }
 	# these resettlement settings attempt to duplicate the base costs for their respective categories
-	allow_resettlement = { NOT = { is_pop_category = criminal } }
+	allow_resettlement = { NOT = { has_job = criminal } }
 	resettlement_cost = {
-		trigger = { is_pop_category = specialist }
+		trigger = { has_job_category = specialist }
 		energy = 250
 	}
 	resettlement_cost = {
-		trigger = { is_pop_category = worker }
+		trigger = { has_job_category = worker }
 		energy = 100
 	}
 	resettlement_cost = {
-		trigger = { is_pop_category = slave }
+		trigger = { has_job_category = slave }
 		energy = 50
 	}
 	resettlement_cost = {
 		trigger = {
-			is_pop_category = specialist
+			has_job_category = specialist
 			exists = owner
 			owner = { NOT = { has_valid_civic = civic_corvee_system } }
 		}
@@ -48,7 +48,7 @@ inmate = {
 	}
 	resettlement_cost = {
 		trigger = {
-			is_pop_category = worker
+			has_job_category = worker
 			exists = owner
 			owner = { NOT = { has_valid_civic = civic_corvee_system } }
 		}
@@ -62,9 +62,22 @@ inmate = {
 		pop_amenities_usage_base = 0.75
 	}
 	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_crime_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = { is_unemployed = yes }
+		# unemployed inmates do crime - but unemployment_penalty is only Pops scope
+		planet_crime_add = 5
+		trade_value_add = -5
+		branch_office_criminal_syndicate_value_add = 5
+	}
+	triggered_planet_modifier = {
 		potential = { can_assemble_budding_pop = yes }
 		planet_pop_assembly_organic_add = @plantoid_budding_rate
 	}
+	# intentionallly ignores special living standard policy effects
+	should_apply_unemployment_penalties = { always = yes }
 	resources = {
 		category = pop_category_inmates
 
