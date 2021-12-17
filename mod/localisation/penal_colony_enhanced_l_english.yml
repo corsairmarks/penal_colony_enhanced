@@ -11,7 +11,7 @@
  job_warden: "Warden"
  job_warden_plural: "Wardens"
  job_warden_desc: "Correctional administrators are responsible for maintaining order on Penal Colonies. They have broad latitude in methodology."
- job_warden_effect_desc: "£job_enforcer£ $job_warden_plural$ produce £unity£ §Y$unity$§!, increase £stability£ §Y$PLANET_STABILITY_TITLE$§!, reduce £happiness£ §Y$HAPPINESS$§! for any non-£pop_cat_ruler£ §Y$pop_cat_ruler_plural$§!, and spawn £defense_army£ §YDefense Armies§!"
+ job_warden_effect_desc: "£job_enforcer£ $job_warden_plural$ produce £unity£ §Y$unity$§!, increase £stability£ §Y$PLANET_STABILITY_TITLE$§!, reduce £happiness£ §Y$HAPPINESS$§! for any £pop_cat_inmate£ §Y$pop_cat_inmate_plural$§!, and spawn £defense_army£ §YDefense Armies§!"
  mod_job_warden_add: "$job_warden$ Jobs"
  mod_job_warden_per_pop: "§G+1§! $job_warden$ Job per $VALUE$ Pops"
  mod_job_warden_per_pop_short: "\n§G+1§! £mod_job_warden_add£ per $VALUE$ £pop£"
