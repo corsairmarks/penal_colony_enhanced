@@ -73,17 +73,12 @@ building_penal_colony_barracks = {
 	}
 
 	triggered_desc = {
-		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
 		trigger = {
 			exists = owner
 			owner = { is_mechanical_empire = no }
 		}
 		text = job_colonist_effect_desc
 	}
-
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -91,6 +86,10 @@ building_penal_colony_barracks = {
 		}
 		text = job_roboticist_effect_desc
 	}
+	triggered_desc = {
+		text = job_enforcer_effect_desc
+	}
+
 }
 
 building_penal_colony_administration = {
@@ -176,7 +175,7 @@ building_penal_colony_administration = {
 			exists = owner
 			owner = {
 				NOR = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 					has_civic = civic_exalted_priesthood
 					has_civic = civic_aristocratic_elite
 					has_civic = civic_merchant_guilds
@@ -191,10 +190,11 @@ building_penal_colony_administration = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { is_megacorp = yes }
 		}
 		modifier = {
-			job_executive_add = 2
+			job_executive_add = 1
+			job_warden_add = 1
 		}
 	}
 
@@ -253,33 +253,29 @@ building_penal_colony_administration = {
 	}
 
 	triggered_desc = {
+		text = job_warden_effect_desc
+	}
+	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
-			}
+			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_aristocratic_elite
-			}
+			owner = { has_civic = civic_aristocratic_elite }
 		}
 		text = job_noble_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_merchant_guilds
-			}
+			owner = { has_civic = civic_merchant_guilds }
 		}
 		text = job_merchant_effect_desc
 	}
-
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -287,13 +283,10 @@ building_penal_colony_administration = {
 		}
 		text = job_roboticist_effect_desc
 	}
-
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			owner = { is_megacorp = yes }
 		}
 		text = job_executive_effect_desc
 	}
@@ -381,7 +374,7 @@ building_penal_colony_complex = {
 			exists = owner
 			owner = {
 				NOR = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 					has_civic = civic_exalted_priesthood
 					has_civic = civic_aristocratic_elite
 					has_civic = civic_merchant_guilds
@@ -396,10 +389,11 @@ building_penal_colony_complex = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { is_megacorp = yes }
 		}
 		modifier = {
-			job_executive_add = 3
+			job_executive_add = 1
+			job_warden_add = 2
 		}
 	}
 
@@ -469,36 +463,26 @@ building_penal_colony_complex = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_authority = auth_corporate } }
-		}
 		text = job_warden_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
-			}
+			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_aristocratic_elite
-			}
+			owner = { has_civic = civic_aristocratic_elite }
 		}
 		text = job_noble_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_merchant_guilds
-			}
+			owner = { has_civic = civic_merchant_guilds }
 		}
 		text = job_merchant_effect_desc
 	}
@@ -512,9 +496,7 @@ building_penal_colony_complex = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			owner = { is_megacorp = yes }
 		}
 		text = job_executive_effect_desc
 	}
@@ -584,9 +566,7 @@ building_penal_colony_enclave = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_active_tradition = tr_domination_imperious_architecture
-			}
+			owner = { has_active_tradition = tr_domination_imperious_architecture }
 		}
 		modifier = {
 			planet_housing_add = 1
@@ -606,7 +586,7 @@ building_penal_colony_enclave = {
 			exists = owner
 			owner = {
 				NOR = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 					has_civic = civic_exalted_priesthood
 					has_civic = civic_aristocratic_elite
 					has_civic = civic_merchant_guilds
@@ -621,20 +601,14 @@ building_penal_colony_enclave = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { is_megacorp = yes }
 		}
 		modifier = {
-			job_executive_add = 4
+			job_executive_add = 2
+			job_warden_add = 2
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_authority = auth_corporate } }
-		}
-		text = job_warden_effect_desc
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -712,36 +686,26 @@ building_penal_colony_enclave = {
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_authority = auth_corporate } }
-		}
 		text = job_warden_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
-			}
+			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_aristocratic_elite
-			}
+			owner = { has_civic = civic_aristocratic_elite }
 		}
 		text = job_noble_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_merchant_guilds
-			}
+			owner = { has_civic = civic_merchant_guilds }
 		}
 		text = job_merchant_effect_desc
 	}
@@ -755,9 +719,7 @@ building_penal_colony_enclave = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			owner = { is_megacorp = yes }
 		}
 		text = job_executive_effect_desc
 	}
