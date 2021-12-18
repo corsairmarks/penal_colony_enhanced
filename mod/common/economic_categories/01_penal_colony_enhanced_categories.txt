@@ -1,3 +1,6 @@
 pop_category_inmates = {
 	parent = planet_pops
+	generate_mult_modifiers = {
+		produces
+	}
 }

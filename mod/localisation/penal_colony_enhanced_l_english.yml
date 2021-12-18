@@ -21,3 +21,4 @@
  pop_cat_inmate_desc: "These pops are captives on a prison planet."
  pop_category_inmates: "$pop_cat_inmate$ $SPECIES_RIGHT_LIVING_STANDARDS$"
  mod_pop_cat_inmate_happiness: "$pop_cat_inmate$ $MOD_POP_HAPPINESS$"
+ mod_pop_category_inmates_produces_mult: "$pop_cat_inmate$ Pop Resource Output"
