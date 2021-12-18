@@ -1,6 +1,6 @@
 # Overview
 
-Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  I have altered the modifier for Penal Colonies to grant 100% habitability, but impose a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, specialist and worker job output, and reduced consumer goods upkeep.  Finally - your prison-planet has a large penalty to researcher and culture-worker output - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
+Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  I have altered the modifier for Penal Colonies to grant 100% habitability, but impose a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, specialist and worker job output, and reduced specialist and worker consumer goods upkeep.  Finally - your prison-planet has a large penalty to researcher and culture-worker output - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
 
 # Changes
 
@@ -8,17 +8,15 @@ Alters Penal Colonies to have a focus on non-research jobs as well as bonuses to
 
 ## Compatibility
 
-Built for Stellaris version 3.0.\* "Dick."
+This mod replaces three game objects related to Penal Colonies:
 
-This mod replaces three game objects related to Penal Solonies:
-
-* `decision_penal_colony` descision to enact a Penal Colony
+* `decision_penal_colony` decision to enact a Penal Colony
 * `col_penal` Penal Colony designation
 * `penal_colony` static modifier
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.
 
-Not compatible with achievements.
+Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
 ### When to Install
 
