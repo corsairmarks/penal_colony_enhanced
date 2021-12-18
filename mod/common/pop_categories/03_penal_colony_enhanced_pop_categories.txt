@@ -60,7 +60,7 @@ inmate = {
 		pop_housing_usage_base = 0.75
 		pop_amenities_usage_base = 0.75
 		# inmates are forced to work harder, like chattel slaves
-		planet_jobs_productive_produces_mult = 0.1
+		# planet_jobs_productive_produces_mult = 0.1
 		# but they have a big penalty to research due to communications restrictions and lack of information clearance
 		planet_jobs_physics_research_produces_mult = -0.9
 		planet_jobs_society_research_produces_mult = -0.9
