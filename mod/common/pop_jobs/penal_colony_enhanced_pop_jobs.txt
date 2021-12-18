@@ -2,7 +2,7 @@ warden = {
 	category = ruler
 	condition_string = BATTLE_THRALL_JOB_TRIGGER
 	icon = enforcer
-	building_icon = building_hall_judgment
+	building_icon = building_penal_colony_enclave
 	clothes_texture_index = 5
 
 	possible_pre_triggers = {
