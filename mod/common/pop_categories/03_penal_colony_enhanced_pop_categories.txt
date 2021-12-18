@@ -55,20 +55,41 @@ inmate = {
 		influence = 10
 	}
 	pop_modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.5
 		pop_happiness = -0.25
 		pop_political_power = -0.75
 		pop_housing_usage_base = 0.75
 		pop_amenities_usage_base = 0.75
 	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_modifier = bleak_planet }
+		}
+		pop_happiness = -0.05
+	}
+	triggered_pop_modifier = {
+		potential = {
+			NOR = {
+				ideal_planet_class = pc_nuked
+				has_trait = trait_pc_nuked_preference
+				has_trait = trait_survivor
+				has_trait = trait_plantoid_radiotrophic
+				has_trait = trait_harvested_radiotrophic
+				has_trait = trait_presapient_irradiated
+			}
+			exists = planet
+			planet = { is_planet_class = pc_nuked }
+		}
+		pop_happiness = -0.05
+	}
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_crime_add = 5
+		planet_crime_add = 4
 	}
 	triggered_planet_modifier = {
 		potential = { is_unemployed = yes }
 		# unemployed inmates do crime - but unemployment_penalty is only Pops scope
-		planet_crime_add = 5
+		planet_crime_add = 4
 		trade_value_add = -5
 		branch_office_criminal_syndicate_value_add = 5
 	}
