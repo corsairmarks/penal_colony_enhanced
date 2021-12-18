@@ -99,7 +99,6 @@ building_penal_colony_administration = {
 	can_be_ruined = no
 	can_be_disabled = no
 	position_priority = 0
-	icon = building_bureaucratic_1
 
 	category = government
 
@@ -299,7 +298,6 @@ building_penal_colony_complex = {
 	can_be_ruined = no
 	can_be_disabled = no
 	position_priority = 0
-	icon = building_bureaucratic_2
 
 	category = government
 
@@ -507,7 +505,6 @@ building_penal_colony_enclave = {
 	can_be_ruined = no
 	can_be_disabled = no
 	position_priority = 0
-	icon = building_bureaucratic_3
 
 	category = government
 
