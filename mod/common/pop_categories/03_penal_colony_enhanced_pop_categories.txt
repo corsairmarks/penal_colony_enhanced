@@ -59,6 +59,12 @@ inmate = {
 		pop_political_power = -0.75
 		pop_housing_usage_base = 0.75
 		pop_amenities_usage_base = 0.75
+		# inmates are forced to work harder, like chattel slaves
+		planet_jobs_productive_produces_mult = 0.1
+		# but they have a big penalty to research due to communications restrictions and lack of information clearance
+		planet_jobs_physics_research_produces_mult = -0.9
+		planet_jobs_society_research_produces_mult = -0.9
+		planet_jobs_engineering_research_produces_mult = -0.9
 	}
 	triggered_pop_modifier = {
 		potential = {
@@ -97,7 +103,7 @@ inmate = {
 		potential = { can_assemble_budding_pop = yes }
 		planet_pop_assembly_organic_add = @plantoid_budding_rate
 	}
-	# intentionallly ignores special living standard policy effects
+	# intentionally ignores special living standard policy effects
 	should_apply_unemployment_penalties = { always = yes }
 	resources = {
 		category = pop_category_inmates
