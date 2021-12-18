@@ -38,6 +38,7 @@ building_penal_colony_barracks = {
 	}
 
 	planet_modifier = {
+		job_enforcer_add = 1
 		planet_housing_add = 3
 		planet_amenities_add = 3
 		planet_max_buildings_add = @buildings_t1
@@ -48,7 +49,6 @@ building_penal_colony_barracks = {
 			exists = owner
 			owner = { is_mechanical_empire = no }
 		}
-		job_enforcer_add = 1
 		job_colonist_add = 1
 	}
 
@@ -57,7 +57,6 @@ building_penal_colony_barracks = {
 			exists = owner
 			owner = { is_mechanical_empire = yes }
 		}
-		job_enforcer_add = 1
 		job_roboticist_add = 1
 	}
 
@@ -143,6 +142,7 @@ building_penal_colony_administration = {
 	}
 
 	planet_modifier = {
+		job_warden_add = 1
 		job_enforcer_add = 1
 		planet_housing_add = 5
 		planet_amenities_add = 5
@@ -180,7 +180,7 @@ building_penal_colony_administration = {
 				}
 			}
 		}
-		job_warden_add = 2
+		job_administrator_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -189,7 +189,6 @@ building_penal_colony_administration = {
 			owner = { is_megacorp = yes }
 		}
 		job_executive_add = 1
-		job_warden_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -198,7 +197,6 @@ building_penal_colony_administration = {
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		job_high_priest_add = 1
-		job_warden_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -207,7 +205,6 @@ building_penal_colony_administration = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
 		job_noble_add = 1
-		job_warden_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -216,7 +213,6 @@ building_penal_colony_administration = {
 			owner = { has_civic = civic_merchant_guilds }
 		}
 		job_merchant_add = 1
-		job_warden_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -244,6 +240,20 @@ building_penal_colony_administration = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
+			owner = {
+				NOR = {
+					is_megacorp = yes
+					has_civic = civic_exalted_priesthood
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_guilds
+				}
+			}
+		}
+		text = job_administrator_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
@@ -265,16 +275,16 @@ building_penal_colony_administration = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { is_megacorp = yes }
 		}
-		text = job_roboticist_effect_desc
+		text = job_executive_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = { is_mechanical_empire = yes }
 		}
-		text = job_executive_effect_desc
+		text = job_roboticist_effect_desc
 	}
 	triggered_desc = {
 		text = job_enforcer_effect_desc
@@ -328,6 +338,7 @@ building_penal_colony_complex = {
 	}
 
 	planet_modifier = {
+		job_warden_add = 2
 		job_enforcer_add = 2
 		planet_housing_add = 8
 		planet_amenities_add = 8
@@ -365,7 +376,7 @@ building_penal_colony_complex = {
 				}
 			}
 		}
-		job_warden_add = 3
+		job_administrator_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -374,7 +385,6 @@ building_penal_colony_complex = {
 			owner = { is_megacorp = yes }
 		}
 		job_executive_add = 1
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -383,7 +393,6 @@ building_penal_colony_complex = {
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		job_high_priest_add = 1
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -392,7 +401,6 @@ building_penal_colony_complex = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
 		job_noble_add = 1
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -401,7 +409,6 @@ building_penal_colony_complex = {
 			owner = { has_civic = civic_merchant_guilds }
 		}
 		job_merchant_add = 1
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -438,6 +445,20 @@ building_penal_colony_complex = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
+			owner = {
+				NOR = {
+					is_megacorp = yes
+					has_civic = civic_exalted_priesthood
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_guilds
+				}
+			}
+		}
+		text = job_administrator_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
@@ -459,16 +480,16 @@ building_penal_colony_complex = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { is_megacorp = yes }
 		}
-		text = job_roboticist_effect_desc
+		text = job_executive_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = { is_mechanical_empire = yes }
 		}
-		text = job_executive_effect_desc
+		text = job_roboticist_effect_desc
 	}
 	triggered_desc = {
 		text = job_enforcer_effect_desc
@@ -526,6 +547,7 @@ building_penal_colony_enclave = {
 	}
 
 	planet_modifier = {
+		job_warden_add = 2
 		job_enforcer_add = 3
 		planet_housing_add = 12
 		planet_amenities_add = 12
@@ -561,7 +583,7 @@ building_penal_colony_enclave = {
 				}
 			}
 		}
-		job_warden_add = 4
+		job_administrator_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -570,7 +592,6 @@ building_penal_colony_enclave = {
 			owner = { is_megacorp = yes }
 		}
 		job_executive_add = 2
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -579,7 +600,6 @@ building_penal_colony_enclave = {
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		job_high_priest_add = 2
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -588,7 +608,6 @@ building_penal_colony_enclave = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
 		job_noble_add = 2
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -597,7 +616,6 @@ building_penal_colony_enclave = {
 			owner = { has_civic = civic_merchant_guilds }
 		}
 		job_merchant_add = 2
-		job_warden_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -643,6 +661,20 @@ building_penal_colony_enclave = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
+			owner = {
+				NOR = {
+					is_megacorp = yes
+					has_civic = civic_exalted_priesthood
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_guilds
+				}
+			}
+		}
+		text = job_administrator_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		text = job_high_priest_effect_desc
@@ -664,16 +696,16 @@ building_penal_colony_enclave = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { is_megacorp = yes }
 		}
-		text = job_roboticist_effect_desc
+		text = job_executive_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_megacorp = yes }
+			owner = { is_mechanical_empire = yes }
 		}
-		text = job_executive_effect_desc
+		text = job_roboticist_effect_desc
 	}
 	triggered_desc = {
 		text = job_enforcer_effect_desc
