@@ -1,10 +1,16 @@
 # Overview
 
-Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  I have altered the modifier for Penal Colonies to grant 100% habitability, but impose a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, specialist and worker job output, and reduced specialist and worker consumer goods upkeep.  Finally - your prison-planet has a large penalty to researcher and culture-worker output - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
+Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  I have altered the modifier for Penal Colonies to grant 100% habitability, but impose a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, a bonus to inmate job output, and (implicitly) reduced upkeep due to high habitability.  Finally - your prison-planet has a large penalty to research - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
 
 # Changes
 
-Alters Penal Colonies to have a focus on non-research jobs as well as bonuses to stability for _lower_ happiness.  Additionally, there is a new capital building for Penal Colonies and a special job provided only by this building - the Warden.  Wardens increase stability at the expense of non-ruler happiness.
+Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a Penal Colony.  This new stratum acts similarly to slave - Pops demote instantly, they have +10% productive job output, and they have a significant happiness penalty (-25%).  In addition they have a 90% penalty to research point output to represent the lack of off-world communication as well as tight control of any information they do receive.  Inmates have very little political power and their unhappiness won't significantly impact the happiness of non-Inmate Pops on the planet (ruler-strata Pops, enforcers, telepaths, and soldiers - the Inmates can't be trusted to supervise _themselves_).  Should you also have the Police State civic, each Inmate produces bonus Unity.  Regardless, Inmates generate crime - which is doubled when unemployed.
+
+The Penal Colony planet designation has been altered to +1 Criminal job per 10 Pops - some of the convicts in the planet-wide prison system manage to escape supervision.  To compensate, Penal Colonies gain bonus stability that scales compared to how _unhappy_ Inmate Pops are.
+
+The Penal Colony planet modifier (added when you enact the Declare Penal Colony decision) has been slightly altered as well - it grants +100% habitability (just like Resort Worlds) and +33% Pop Growth from immigration, but now also imposes a flat -50% to overall Pop Growth.
+
+To keep your Penal Colony running smoothly, this mod also creates a new capitol building complete with recolored icons.  Some Administrator jobs are replaced with the new Warden job that produces unity and stability, but also decreases the happiness of Inmate-stratum Pops.  Countries with other Administrator-substitution civics end up replacing all of the Administrator jobs with a split of Wardens and their special ruler jobs.  If your empire uses Battle Thralls, they can also serve as Wardens.
 
 ## Compatibility
 
@@ -12,9 +18,15 @@ This mod replaces three game objects related to Penal Colonies:
 
 * `decision_penal_colony` decision to enact a Penal Colony
 * `col_penal` Penal Colony designation
-* `penal_colony` static modifier
+* `penal_colony` static modifier for Penal Colonies
 
-This mod is incompatible with other mods that want to also overwrite these same game objects.
+And it overrides three scripted triggers related to capitol buildings:
+
+* `has_upgraded_capital`
+* `has_major_upgraded_capital`
+* `has_fully_upgraded_capital`
+
+This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
 
 Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
