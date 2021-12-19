@@ -1,10 +1,10 @@
 # Overview
 
-Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  I have altered the modifier for Penal Colonies to grant 100% habitability, but impose a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, a bonus to inmate job output, and (implicitly) reduced upkeep due to high habitability.  Finally - your prison-planet has a large penalty to research - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
+Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds but not Penal Colonies?  Or been frustrated at needing to use a high-habitability planet as your Penal Colony?  Then this mod is for you!  The modifier for Penal Colonies is altered to grant 100% habitability, but imposes a flat -50% to Pop growth speed (the same as 0% habitability).  In exchange for the overall growth penalty, you gain a new bonus to immigration-based Pop growth, a bonus to inmate job output, and (implicitly) reduced upkeep due to high habitability.  Finally - your prison-planet has a large penalty to research - the criminals cannot be trusted with state research secrets and have limited ability to communicate off-planet.
 
 # Changes
 
-Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a Penal Colony.  This new stratum acts similarly to slave - Pops demote instantly, they have +10% productive job output, and they have a significant happiness penalty (-25%).  In addition they have a 90% penalty to research point output to represent the lack of off-world communication as well as tight control of any information they do receive.  Inmates have very little political power and their unhappiness won't significantly impact the happiness of non-Inmate Pops on the planet (ruler-strata Pops, enforcers, telepaths, and soldiers - the Inmates can't be trusted to supervise _themselves_).  Should you also have the Police State civic, each Inmate produces bonus Unity.  Regardless, Inmates generate crime - which is doubled when unemployed.
+Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a Penal Colony.  This new stratum acts similarly to slave - Pops demote instantly, they have +10% productive job output, and they have a significant happiness penalty (-25%).  In addition they have a -90% penalty to research point output to represent the lack of off-world communication as well as tight control of any information they do receive.  Inmates have very little political power and their unhappiness won't significantly impact the happiness of non-Inmate Pops on the planet (ruler-strata Pops, enforcers, telepaths, and soldiers - the Inmates can't be trusted to supervise _themselves_).  Should you also have the Police State civic, each Inmate produces bonus Unity.  Regardless, Inmates generate crime - which is doubled when unemployed.
 
 The Penal Colony planet designation has been altered to +1 Criminal job per 10 Pops - some of the convicts in the planet-wide prison system manage to escape supervision.  To compensate, Penal Colonies gain bonus stability that scales compared to how _unhappy_ Inmate Pops are.
 
@@ -39,8 +39,11 @@ This mod can be safely added to your savegame after the game has started, but no
 Overriding a colony designation or a decision causes the game to log an error, so expect to see two lines in the error.log file similar to:
 
 ```
-[00:14:44][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists
-[00:14:45][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists
+[01:07:07][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists
+[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists
+[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists
+[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists
+[01:07:09][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists
 ```
 
 ## Changelog
