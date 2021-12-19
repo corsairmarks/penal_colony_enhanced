@@ -167,13 +167,11 @@ warden = {
 			factor = 1.1
 			has_trait = trait_brainslug
 			exists = owner
-			owner = { has_valid_civic = civic_police_state }
 		}
 		modifier = {
 			factor = 1.05
 			has_trait = trait_presapient_natural_intellectuals
 			exists = owner
-			owner = { has_valid_civic = civic_police_state }
 		}
 		modifier = {
 			factor = 20
@@ -189,8 +187,6 @@ warden = {
 				has_trait = trait_robot_propaganda_machines
 				has_trait = trait_traditional
 			}
-			exists = owner
-			owner = { has_valid_civic = civic_police_state }
 		}
 		modifier = {
 			factor = 0.75
