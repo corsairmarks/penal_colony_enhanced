@@ -12,6 +12,11 @@ The Penal Colony planet modifier (added when you enact the Create Penal Colony d
 
 To keep your Penal Colony running smoothly, this mod also creates a new capitol building complete with recolored icons.  Some Administrator jobs are replaced with the new Warden job that produces unity and stability, but also decreases the happiness of Inmate-stratum Pops.  Countries with other Administrator-substitution civics end up replacing all of the Administrator jobs with a split of Wardens and their special ruler jobs.  If your empire uses Battle Thralls, they can also serve as Wardens.
 
+## Localisation
+
+* English by corsairmarks (author)
+* German (Deutsch) by [Lucanoria](https://steamcommunity.com/id/Lucanoria)
+
 ## Compatibility
 
 This mod replaces three game objects related to Penal Colonies:
