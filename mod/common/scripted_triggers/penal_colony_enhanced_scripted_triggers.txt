@@ -28,3 +28,9 @@ has_fully_upgraded_penal_capital = {
 		has_building = building_penal_colony_enclave
 	}
 }
+
+# this = country
+pce_is_necrophage_empire = {
+	has_origin = origin_necrophage
+	has_trait = trait_necrophage
+}

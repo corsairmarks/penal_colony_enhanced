@@ -20,7 +20,23 @@ warden = {
 				owner = { has_technology = tech_synthetic_workers }
 			}
 		}
-		battle_thrall_job_check_trigger = yes
+		if = {
+			limit = {
+				exists = owner
+				owner = { pce_is_necrophage_empire = yes }
+				NOT = { species = { has_species_flag = allow_military_leaders_honored_protectors@prev.owner } }
+			}
+			custom_tooltip = {
+				text = RULER_JOB_NECROPHAGE_TRIGGER
+				has_trait = trait_necrophage
+				is_enslaved = no
+				is_being_purged = no
+				is_being_assimilated = no
+			}
+		}
+		else = {
+			battle_thrall_job_check_trigger = yes
+		}
 	}
 
 	resources = {
