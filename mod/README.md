@@ -54,6 +54,7 @@ Overriding a colony designation or a decision causes the game to log an error, s
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.1.0 Add German localisation by Lucanoria
 
 ## Source Code
 
