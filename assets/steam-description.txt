@@ -52,7 +52,7 @@ Overriding a colony designation or a decision causes the game to log an error, s
 
 [h2]Changelog[/h2]
 
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2686810902]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
