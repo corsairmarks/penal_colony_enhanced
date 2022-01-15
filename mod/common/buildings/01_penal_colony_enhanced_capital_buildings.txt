@@ -88,7 +88,6 @@ building_penal_colony_barracks = {
 	triggered_desc = {
 		text = job_enforcer_effect_desc
 	}
-
 }
 
 building_penal_colony_administration = {
@@ -137,7 +136,7 @@ building_penal_colony_administration = {
 	}
 
 	show_tech_unlock_if = {
-		is_regular_empire = yes
+		always = no
 	}
 
 	planet_modifier = {
@@ -332,7 +331,7 @@ building_penal_colony_complex = {
 	}
 
 	show_tech_unlock_if = {
-		is_regular_empire = yes
+		always = no
 	}
 
 	planet_modifier = {
@@ -540,7 +539,7 @@ building_penal_colony_enclave = {
 	}
 
 	show_tech_unlock_if = {
-		is_regular_empire = yes
+		always = no
 	}
 
 	planet_modifier = {
