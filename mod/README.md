@@ -8,9 +8,11 @@ Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a
 
 The Penal Colony planet designation has been altered to +1 Criminal job per 10 Pops - some of the convicts in the planet-wide prison system manage to escape supervision.  To compensate, Penal Colonies gain bonus stability that scales compared to how _unhappy_ Inmate Pops are.
 
-The Penal Colony planet modifier (added when you enact the Create Penal Colony decision) has been slightly altered as well - it grants +100% habitability (just like Resort Worlds) and +33% Pop Growth from immigration, but now also imposes a flat -50% to overall Pop Growth.
+The Penal Colony planet modifier (added when you enact the Create Penal Colony decision) has been slightly altered as well - it grants +100% habitability (just like Resort Worlds) and +33% Pop Growth from immigration, but now also imposes a flat -50% to overall Pop Growth.  Your other planets also receive a small amount of flat crime reduction (-5) in addition to the existing -25% crime bonus.
 
 To keep your Penal Colony running smoothly, this mod also creates a new capitol building complete with recolored icons.  Some Administrator jobs are replaced with the new Warden job that produces unity and stability, but also decreases the happiness of Inmate-stratum Pops.  Countries with other Administrator-substitution civics end up replacing all of the Administrator jobs with a split of Wardens and their special ruler jobs.  If your empire uses Battle Thralls, they can also serve as Wardens.
+
+Finally, you can use your inmates to your military advantage.  Penal colonies are automatically defended by Penal Conscript Garrisons instead of standard Defense Armies, and you can conscript (train) more to serve in assault Penal Conscript Legions.  Penal Conscripts (both types) have double the health of their corresponding standard army types, but deal increased collateral damage and have lower moral.  Penal Conscript Legions are limited to one per Pop with the Inmate stratum (the maximum count updates monthly).
 
 ## Localisation
 
@@ -24,6 +26,7 @@ This mod replaces three game objects related to Penal Colonies:
 * `decision_penal_colony` decision to enact a Penal Colony
 * `col_penal` Penal Colony designation
 * `penal_colony` static modifier for Penal Colonies
+* `penal_colony_other_planets` static modifier that decreases crime on other planets
 
 And it overrides three scripted triggers related to capitol buildings:
 
@@ -55,6 +58,11 @@ Overriding a colony designation or a decision causes the game to log an error, s
 
 * 1.0.0 Initial version
 * 1.1.0 Add German localisation by Lucanoria
+* 1.2.0 More enhancements
+    * Add Penal Conscript Legions - similar to normal assault armies but have twice mas much health; they are limited by how many Pops are on your Penal Colony
+    * Add Penal Conscript Garrisons - similar to normal defensive armies but have twice mas much health; they **not** limited but are only available to spawn on Penal Colonies
+    * Increased happiness reduction by Wardens (5% => 10%)
+    * Buffed the "Penal Colony Other Worlds" modifier to reduce crime by a small amount (-5) in addition to the existing -25%
 
 ## Source Code
 
