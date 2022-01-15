@@ -13,6 +13,7 @@ event = {
 	}
 }
 
+# triggered by on_single_player_save_game_load
 event = {
 	id = penal_colony_enhanced.1
 	hide_window = yes
@@ -29,6 +30,169 @@ event = {
 				}
 			}
 			convert_capital_to_penal_capital = yes
+		}
+	}
+}
+
+# triggered by on_army_killed_in_combat and on_army_killed_no_combat
+# decrements the appropriate army counters so you can build reinforcements up to the cap
+# root = owner
+# from = army
+# fromfrom = opponent (only on_army_killed_in_combat)
+# fromfromfrom = planet (only on_army_killed_in_combat)
+country_event = {
+	id = penal_colony_enhanced.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		NOT = { has_country_flag = army_counter_decremented@from }
+		from = { army_type = penal_assault_army }
+	}
+	immediate = {
+		from = {
+			save_event_target_as = removed_army
+			decrement_penal_assault_soldier_count = yes
+		}
+	}
+}
+
+# triggered by on_army_recruited
+# decrement queued and increment counter of matching type, or remove the army if it would exceed the cap (also refunds the cost)
+# root = planet
+# from = army
+planet_event = {
+	id = penal_colony_enhanced.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		from = { army_type = penal_assault_army }
+	}
+	immediate = {
+		from = {
+			owner = {
+				decrement_penal_assault_soldier_queued_count = yes
+				if = {
+					limit = { has_available_penal_assault_capacity = yes }
+					increment_penal_assault_soldier_count = yes
+				}
+				else = {
+					country_event = {
+						id = penal_colony_enhanced.6
+						days = 1
+						scopes = {
+							from = from
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# triggered by on_monthly_pulse and on_single_player_save_game_load - multiplayer can manually fire this event if needed
+# ensure accurate army counters because we can't detect disbanded armies
+event = {
+	id = penal_colony_enhanced.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_playable_country = {
+			if = {
+				limit = { NOT = { is_variable_set = penal_assault_soldier_queued_count } }
+				set_variable = {
+					which = penal_assault_soldier_queued_count
+					value = 0
+				}
+			}
+			if = {
+				limit = { NOT = { is_variable_set = penal_assault_soldier_maximum } }
+				set_variable = {
+					which = penal_assault_soldier_maximum
+					value = 0
+				}
+			}
+			set_variable = {
+				which = penal_assault_soldier_count
+				value = 0
+			}
+			every_owned_planet = {
+				limit = {
+					OR = {
+						colony_type = col_penal
+						has_modifier = penal_colony
+					}
+				}
+				every_owned_pop = {
+					limit = { is_pop_category = inmate }
+					prevprev = {
+						change_variable = {
+							which = penal_assault_soldier_maximum
+							value = 1
+						}
+					}
+				}
+			}
+			every_owned_army = {
+				limit = { army_type = penal_assault_army }
+				prev = { increment_penal_assault_soldier_count = yes }
+			}
+		}
+	}
+}
+
+# triggered by on_fleet_disbanded
+# root = owner
+# from = fleet
+country_event = {
+	id = penal_colony_enhanced.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		from = { is_ship_class = shipclass_transport }
+	}
+	immediate = {
+		every_owned_army = {
+			limit = { army_type = penal_assault_army }
+			if = {
+				limit = {
+					exists = fleet
+					fleet = { is_same_value = from }
+					owner = { NOT = { has_country_flag = army_counter_decremented@prev } }
+				}
+				save_event_target_as = removed_army
+				prev = { decrement_penal_assault_soldier_count = yes }
+			}
+		}
+	}
+}
+
+# remove and refund an army that was over cap
+# root = country, owner
+# from = army, to be removed
+country_event = {
+	id = penal_colony_enhanced.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		exists = from
+		from = { army_type = penal_assault_army }
+	}
+	immediate = {
+		from = {
+			owner = {
+				set_timed_country_flag = {
+					flag = army_counter_decremented@prev
+					days = 7
+				}
+				# matches cost in 01_penal_colony_enhanced_armies.txt
+				add_resource = {
+					minerals = 75
+				}
+				prev = { remove_army = yes }
+			}
 		}
 	}
 }

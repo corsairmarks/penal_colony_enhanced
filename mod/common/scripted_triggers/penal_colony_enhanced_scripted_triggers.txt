@@ -34,3 +34,15 @@ pce_is_necrophage_empire = {
 	has_origin = origin_necrophage
 	has_trait = trait_necrophage
 }
+
+# this = country
+has_available_penal_assault_capacity = {
+	is_variable_set = penal_assault_soldier_count
+	is_variable_set = penal_assault_soldier_queued_count
+	is_variable_set = penal_assault_soldier_maximum
+	check_variable_arithmetic = {
+		which = penal_assault_soldier_count
+		add = penal_assault_soldier_queued_count
+		value < penal_assault_soldier_maximum
+	}
+}

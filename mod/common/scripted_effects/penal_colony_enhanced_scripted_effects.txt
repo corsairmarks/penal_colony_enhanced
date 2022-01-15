@@ -26,3 +26,56 @@ convert_capital_to_penal_capital = {
 		add_building = building_penal_colony_enclave
 	}
 }
+
+# this = country
+increment_penal_assault_soldier_count = {
+	change_variable = {
+		which = penal_assault_soldier_count
+		value = 1
+	}
+}
+
+# this = country
+increment_penal_assault_soldier_queued_count = {
+	change_variable = {
+		which = penal_assault_soldier_queued_count
+		value = 1
+	}
+}
+
+# this = country
+# event_target:removed_army = army
+decrement_penal_assault_soldier_count = {
+	if = {
+		limit = {
+			check_variable = {
+				which = penal_assault_soldier_count
+				value > 0
+			}
+		}
+		set_timed_country_flag = {
+			flag = army_counter_decremented@event_target:removed_army
+			days = 7
+		}
+		subtract_variable = {
+			which = penal_assault_soldier_count
+			value = 1
+		}
+	}
+}
+
+# this = country
+decrement_penal_assault_soldier_queued_count = {
+	if = {
+		limit = {
+			check_variable = {
+				which = penal_assault_soldier_queued_count
+				value > 0
+			}
+		}
+		subtract_variable = {
+			which = penal_assault_soldier_queued_count
+			value = 1
+		}
+	}
+}

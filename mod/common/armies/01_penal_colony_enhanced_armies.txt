@@ -1,0 +1,89 @@
+penal_assault_army = {
+	damage = 1.00
+	health = 2.00
+	morale = 0.75
+	morale_damage = 0.75
+	collateral_damage = 2.00
+	war_exhaustion = 0.50
+	time = 45
+	icon = GFX_army_type_slave
+	pop_limited = no
+	use_armynames_from = slave_army
+	resources = {
+		category = armies
+		cost = {
+			minerals = 75
+		}
+		upkeep = {
+			energy = 0.75
+		}
+	}
+	prerequisites = { "tech_penal_colonies" }
+	show_tech_unlock_if = {
+		is_machine_empire = no
+	}
+	potential = {
+		OR = {
+			has_modifier = penal_colony
+			colony_type = col_penal
+		}
+		from = {
+			is_robotic = no
+			is_sapient = yes
+		}
+		owner = { is_machine_empire = no }
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = penal_assault_army_limit_tooltip
+			owner = { has_available_penal_assault_capacity = yes }
+		}
+		any_owned_pop = {
+			is_pop_category = inmate
+			is_robot_pop = no
+		}
+	}
+	on_queued = {
+		owner = { increment_penal_assault_soldier_queued_count = yes }
+	}
+	on_unqueued = {
+		owner = { decrement_penal_assault_soldier_queued_count = yes }
+	}
+}
+
+penal_defense_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 2.50
+	damage = 1.50
+	morale = 1.00
+	morale_damage = 0.75
+	collateral_damage = 0.50
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon = GFX_army_type_slave
+	use_armynames_from = slave_army
+	prerequisites = { "tech_penal_colonies" }
+	potential = {
+		OR = {
+			has_modifier = penal_colony
+			colony_type = col_penal
+		}
+		from = {
+			is_robotic = no
+			is_sapient = yes
+		}
+		owner = {
+			is_primitive = no
+			is_machine_empire = no
+		}
+	}
+	allow = {
+		any_owned_pop = {
+			is_pop_category = inmate
+			is_robot_pop = no
+		}
+	}
+	spawn_chance = {
+		factor = 5
+	}
+}

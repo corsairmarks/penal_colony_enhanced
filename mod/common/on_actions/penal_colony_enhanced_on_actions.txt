@@ -10,5 +10,53 @@ on_single_player_save_game_load = {
 	events = {
 		penal_colony_enhanced.1
 		penal_colony_enhanced.13 # flag mod as installed
+		penal_colony_enhanced.4 # ensure accurate army counters
+	}
+}
+
+# fired monthly
+on_monthly_pulse = {
+	events = {
+		# ensure accurate army counters
+		# this is necessary to catch any disbanded armies
+		penal_colony_enhanced.4
+	}
+}
+
+# fired when army construction has been completed
+# this = planet
+# from = army
+on_army_recruited = {
+	events = {
+		penal_colony_enhanced.3
+	}
+}
+
+# fired when an army has been killed in ground combat
+# this = owner
+# from = army
+# fromfrom = opponent
+# fromfromfrom = planet
+on_army_killed_in_combat = {
+	events = {
+		penal_colony_enhanced.2
+	}
+}
+
+# fired when an army has ceased to exist for any other reason
+# this = country
+# from = army
+on_army_killed_no_combat = {
+	events = {
+		penal_colony_enhanced.2
+	}
+}
+
+# fired when a fleet is disbanded (but not individual ships)
+# this = owner
+# from = fleet
+on_fleet_disbanded = {
+	events = {
+		penal_colony_enhanced.5
 	}
 }
