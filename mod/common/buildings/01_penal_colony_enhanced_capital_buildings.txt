@@ -178,7 +178,7 @@ building_penal_colony_administration = {
 				}
 			}
 		}
-		job_administrator_add = 1
+		job_politician_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -247,7 +247,7 @@ building_penal_colony_administration = {
 				}
 			}
 		}
-		text = job_administrator_effect_desc
+		text = job_politician_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
@@ -373,7 +373,7 @@ building_penal_colony_complex = {
 				}
 			}
 		}
-		job_administrator_add = 1
+		job_politician_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -451,7 +451,7 @@ building_penal_colony_complex = {
 				}
 			}
 		}
-		text = job_administrator_effect_desc
+		text = job_politician_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
@@ -579,7 +579,7 @@ building_penal_colony_enclave = {
 				}
 			}
 		}
-		job_administrator_add = 2
+		job_politician_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -666,7 +666,7 @@ building_penal_colony_enclave = {
 				}
 			}
 		}
-		text = job_administrator_effect_desc
+		text = job_politician_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
