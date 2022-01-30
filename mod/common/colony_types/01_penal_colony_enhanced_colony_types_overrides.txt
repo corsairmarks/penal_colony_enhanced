@@ -10,7 +10,8 @@ col_penal = {
 	}
 
 	planet_modifier = {
-		job_criminal_per_pop = 0.1 # ...some criminals refuse to work
+		# inmates are forced to work harder, like chattel slaves
+		planet_jobs_inmate_produces_mult = 0.1
 	}
 
 	# inmate unhappiness increases stability

@@ -4,11 +4,16 @@ penal_colony = {
 	planet_crime_mult = 1
 	pop_environment_tolerance = 1 # get to 100% hab for no penalties...
 	pop_growth_speed = -0.5 # ...apply growth-speed penalty identical to 0% hab
-	planet_immigration_pull_mult = 0.33
+	planet_immigration_pull_mult = 0.33 # ..."attracts"criminals - because other planets send them here
 	pop_growth_from_immigration = 0.33 # ...lots of criminals are being sent here
+	job_criminal_per_pop = 0.1 # ...some criminals refuse to work
+	pop_category_inmates_consumer_goods_upkeep_mult = -0.5 # ...inmates are allocated fewer basic necessities
+	# ...and they have a big penalty to research due to communications restrictions and lack of information clearance
+	planet_jobs_inmate_physics_research_produces_mult = -0.9
+	planet_jobs_inmate_society_research_produces_mult = -0.9
+	planet_jobs_inmate_engineering_research_produces_mult = -0.9
 	custom_tooltip = penal_colony_empire_effects
 	show_only_custom_tooltip = no
-	# This only works on timed planet modifiers!
 	apply_modifier_to_other_planets = penal_colony_other_planets
 }
 
