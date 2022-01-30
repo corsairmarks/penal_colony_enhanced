@@ -44,7 +44,7 @@ inmate = {
 			exists = owner
 			owner = { NOT = { has_valid_civic = civic_corvee_system } }
 		}
-		influence = 25
+		unity = 25
 	}
 	resettlement_cost = {
 		trigger = {
@@ -52,7 +52,7 @@ inmate = {
 			exists = owner
 			owner = { NOT = { has_valid_civic = civic_corvee_system } }
 		}
-		influence = 10
+		unity = 10
 	}
 	pop_modifier = {
 		pop_happiness = -0.25
@@ -103,12 +103,12 @@ inmate = {
 		potential = { can_assemble_budding_pop = yes }
 		planet_pop_assembly_organic_add = @plantoid_budding_rate
 	}
-	# intentionally ignores special living standard policy effects
 	should_apply_unemployment_penalties = { always = yes }
 	resources = {
 		category = pop_category_inmates
 
 		# Luxuries Upkeep (based on built-in worker strata)
+		# This is still necessary in 3.3 in order to avoid overwriting all the standards of living!
 		upkeep = {
 			trigger = { has_shared_burden_living_standard_type = yes }
 			consumer_goods = @living_standard_luxuries_shared_burden
@@ -140,22 +140,18 @@ inmate = {
 			consumer_goods = @living_standard_luxuries_very_low
 		}
 
-		# Organic Upkeep
-		upkeep = {
-			trigger = { has_phototrophic_energy_upkeep = yes }
-			energy = @living_standard_phototrophic_normal
-		}
+		# Biological Upkeep
 		upkeep = {
 			trigger = {
 				is_organic_species = yes
 				is_phototrophic = no
 				is_lithoid = no
-				OR = {
-					has_very_high_living_standard_type = yes
-					has_high_living_standard_type = yes
-				}
 			}
 			food = @living_standard_food_normal
+		}
+		upkeep = {
+			trigger = { has_phototrophic_energy_upkeep = yes }
+			energy = @living_standard_phototrophic_normal
 		}
 		upkeep = {
 			trigger = { is_phototrophic = yes }
