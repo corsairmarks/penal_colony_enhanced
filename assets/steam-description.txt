@@ -39,11 +39,11 @@ This mod can be safely added to your savegame after the game has started, but no
 [h2]Known Issues[/h2]
 Overriding a colony designation or a decision causes the game to log an error, so expect to see two lines in the error.log file similar to:
 [code]
-[01:07:07][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists
-[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists
-[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists
-[01:07:08][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists
-[01:07:09][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists
+[23:42:13][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists, using the one at  file: common/colony_types/01_penal_colony_enhanced_colony_types_overrides.txt line: 1
+[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 2
+[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 76
+[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 140
+[23:42:18][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists, using the one at  file: common/decisions/03_penal_colony_enhanced_special_decisions_overrides.txt line: 1
 [/code]
 [h2]Changelog[/h2]
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2686810902]Change Notes[/url]
