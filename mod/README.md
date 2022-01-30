@@ -10,7 +10,7 @@ The Penal Colony planet designation has been altered to +1 Criminal job per 10 P
 
 The Penal Colony planet modifier (added when you enact the Create Penal Colony decision) has been slightly altered as well - it grants +100% habitability (just like Resort Worlds) and +33% Pop Growth from immigration, but now also imposes a flat -50% to overall Pop Growth.  Your other planets also receive a small amount of flat crime reduction (-5) in addition to the existing -25% crime bonus.
 
-To keep your Penal Colony running smoothly, this mod also creates a new capitol building complete with recolored icons.  Some Administrator jobs are replaced with the new Warden job that produces unity and stability, but also decreases the happiness of Inmate-stratum Pops.  Countries with other Administrator-substitution civics end up replacing all of the Administrator jobs with a split of Wardens and their special ruler jobs.  If your empire uses Battle Thralls, they can also serve as Wardens.
+To keep your Penal Colony running smoothly, this mod also creates a new capitol building complete with recolored icons.  Some Politician jobs are replaced with the new Warden job that produces unity and stability, but also decreases the happiness of Inmate-stratum Pops.  Countries with other Politician-substitution civics end up replacing all of the Politician jobs with a split of Wardens and their special ruler jobs.  If your empire uses Battle Thralls, they can also serve as Wardens.
 
 Finally, you can use your inmates to your military advantage.  Penal colonies are automatically defended by Penal Conscript Garrisons instead of standard Defense Armies, and you can conscript (train) more to serve in assault Penal Conscript Legions.  Penal Conscripts (both types) have double the health of their corresponding standard army types, but deal increased collateral damage and have lower moral.  Penal Conscript Legions are limited to one per Pop with the Inmate stratum (the maximum count updates monthly).
 
@@ -36,7 +36,7 @@ And it overrides three scripted triggers related to capitol buildings:
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
 
-Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 ### When to Install
 
@@ -63,6 +63,9 @@ Overriding a colony designation or a decision causes the game to log an error, s
     * Add Penal Conscript Garrisons - similar to normal defensive armies but have twice mas much health; they **not** limited but are only available to spawn on Penal Colonies
     * Increased happiness reduction by Wardens (5% => 10%)
     * Buffed the "Penal Colony Other Worlds" modifier to reduce crime by a small amount (-5) in addition to the existing -25%
+* 2.0.0 Update for Stellaris version 3.3 "Libra"
+    * Convert references to Administrators to Politicians
+    * Influence costs converted to unity, to match the changes from 3.3
 
 ## Source Code
 
