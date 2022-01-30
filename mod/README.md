@@ -21,7 +21,7 @@ Finally, you can use your inmates to your military advantage.  Penal colonies ar
 
 ## Compatibility
 
-This mod replaces three game objects related to Penal Colonies:
+This mod replaces four game objects related to Penal Colonies:
 
 * `decision_penal_colony` decision to enact a Penal Colony
 * `col_penal` Penal Colony designation
@@ -34,6 +34,8 @@ And it overrides three scripted triggers related to capitol buildings:
 * `has_major_upgraded_capital`
 * `has_fully_upgraded_capital`
 
+And finally it overrides the `planet_jobs` (Jobs) economic category in order to create multipliers for inmate production.
+
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
 
 Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
@@ -44,14 +46,15 @@ This mod can be safely added to your savegame after the game has started, but no
 
 ## Known Issues
 
-Overriding a colony designation or a decision causes the game to log an error, so expect to see two lines in the error.log file similar to:
+Overriding game elements causes the game to log errors, so expect to see six lines in the error.log file similar to:
 
 ```
-[23:42:13][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists, using the one at  file: common/colony_types/01_penal_colony_enhanced_colony_types_overrides.txt line: 1
-[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 2
-[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 76
-[23:42:16][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 140
-[23:42:18][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists, using the one at  file: common/decisions/03_penal_colony_enhanced_special_decisions_overrides.txt line: 1
+[16:45:28][game_singleobjectdatabase.h:147]: Object with key: planet_jobs already exists, using the one at  file: common/economic_categories/01_penal_colony_enhanced_categories.txt line: 8
+[16:45:30][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists, using the one at  file: common/colony_types/01_penal_colony_enhanced_colony_types_overrides.txt line: 1
+[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 2
+[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 76
+[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 140
+[16:45:31][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists, using the one at  file: common/decisions/03_penal_colony_enhanced_special_decisions_overrides.txt line: 1
 ```
 
 ## Changelog
@@ -66,6 +69,7 @@ Overriding a colony designation or a decision causes the game to log an error, s
 * 2.0.0 Update for Stellaris version 3.3 "Libra"
     * Convert references to Administrators to Politicians
     * Influence costs converted to unity, to match the changes from 3.3
+    * Update the Penal Colony designation so its bonus scale with new Planetary Ascension Tiers, but its penalties do not
 
 ## Source Code
 
