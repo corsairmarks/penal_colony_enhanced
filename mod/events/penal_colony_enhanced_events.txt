@@ -106,15 +106,12 @@ event = {
 					value = 0
 				}
 			}
-			if = {
-				limit = { NOT = { is_variable_set = penal_assault_soldier_maximum } }
-				set_variable = {
-					which = penal_assault_soldier_maximum
-					value = 0
-				}
-			}
 			set_variable = {
 				which = penal_assault_soldier_count
+				value = 0
+			}
+			set_variable = {
+				which = penal_assault_soldier_maximum
 				value = 0
 			}
 			every_owned_planet = {
