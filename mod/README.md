@@ -69,7 +69,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
 * 2.0.0 Update for Stellaris version 3.3 "Libra"
     * Convert references to Administrators to Politicians
     * Influence costs converted to unity, to match the changes from 3.3
-    * Update the Penal Colony designation so its bonus scale with new Planetary Ascension Tiers, but its penalties do not
+    * Update the Penal Colony designation so its bonus scales with new Planetary Ascension Tiers, but its penalties do not
 
 ## Source Code
 
