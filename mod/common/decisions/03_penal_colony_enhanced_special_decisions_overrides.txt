@@ -34,6 +34,21 @@ decision_penal_colony = {
 		}
 	}
 	ai_weight = {
-		weight = 0
+		weight = 2
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { has_valid_civic = civic_police_state }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { is_authoritarian = yes }
+		}
+		modifier = {
+			factor = 0.5
+			exists = owner
+			owner = { is_egalitarian = yes }
+		}
 	}
 }
