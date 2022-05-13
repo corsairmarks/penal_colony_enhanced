@@ -38,7 +38,7 @@ And finally it overrides the `planet_jobs` (Jobs) economic category in order to 
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
 
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 ### When to Install
 
@@ -70,6 +70,13 @@ Overriding game elements causes the game to log errors, so expect to see six lin
     * Convert references to Administrators to Politicians
     * Influence costs converted to unity, to match the changes from 3.3
     * Update the Penal Colony designation so its bonus scales with new Planetary Ascension Tiers, but its penalties do not
+* 3.0.0 Update for Stellaris version 3.4 "Cepheus"
+    * Update penal armies with new army properties
+    * Authoritarians and Police States have an increased chance for Pops to resettle to a Penal Colony
+    * Allow the AI to designate Penal Colonies
+    * Update the overridden economic category `planet_jobs` with underlying changes from 3.4
+    * Update Warden job weights to use the new weighting system and amenity production system
+    * Apply memory optimizations to effects and triggers
 
 ## Source Code
 
