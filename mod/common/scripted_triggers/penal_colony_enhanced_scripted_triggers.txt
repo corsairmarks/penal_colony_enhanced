@@ -1,5 +1,6 @@
 # this = planet
 has_upgraded_penal_capital = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = "requires_building_prison_capital"
 		OR = {
@@ -12,6 +13,7 @@ has_upgraded_penal_capital = {
 
 # this = planet
 has_major_upgraded_penal_capital = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = "requires_building_major_prison_capital"
 		OR = {
@@ -23,6 +25,7 @@ has_major_upgraded_penal_capital = {
 
 # this = planet
 has_fully_upgraded_penal_capital = {
+	optimize_memory
 	custom_tooltip = {
 		fail_text = "requires_building_system_prison_capital"
 		has_building = building_penal_colony_enclave
@@ -31,12 +34,14 @@ has_fully_upgraded_penal_capital = {
 
 # this = country
 pce_is_necrophage_empire = {
+	optimize_memory
 	has_origin = origin_necrophage
 	has_trait = trait_necrophage
 }
 
 # this = country
 has_available_penal_assault_capacity = {
+	optimize_memory
 	is_variable_set = penal_assault_soldier_count
 	is_variable_set = penal_assault_soldier_queued_count
 	is_variable_set = penal_assault_soldier_maximum

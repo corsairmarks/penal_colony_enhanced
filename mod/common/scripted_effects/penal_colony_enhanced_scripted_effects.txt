@@ -1,5 +1,6 @@
 # this = planet
 convert_capital_to_penal_capital = {
+	optimize_memory
 	if = {
 		limit = { has_building = building_colony_shelter }
 		remove_building = building_colony_shelter
@@ -29,6 +30,7 @@ convert_capital_to_penal_capital = {
 
 # this = country
 increment_penal_assault_soldier_count = {
+	optimize_memory
 	change_variable = {
 		which = penal_assault_soldier_count
 		value = 1
@@ -37,6 +39,7 @@ increment_penal_assault_soldier_count = {
 
 # this = country
 increment_penal_assault_soldier_queued_count = {
+	optimize_memory
 	change_variable = {
 		which = penal_assault_soldier_queued_count
 		value = 1
@@ -46,6 +49,7 @@ increment_penal_assault_soldier_queued_count = {
 # this = country
 # event_target:removed_army = army
 decrement_penal_assault_soldier_count = {
+	optimize_memory
 	if = {
 		limit = {
 			check_variable = {
@@ -66,6 +70,7 @@ decrement_penal_assault_soldier_count = {
 
 # this = country
 decrement_penal_assault_soldier_queued_count = {
+	optimize_memory
 	if = {
 		limit = {
 			check_variable = {

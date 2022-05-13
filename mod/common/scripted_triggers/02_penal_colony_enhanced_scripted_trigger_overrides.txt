@@ -1,5 +1,6 @@
 # each trigger is the same as the base game, except with a minimal hook for the new capital building in this mod
 has_upgraded_capital = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = penal_colony }
 		has_upgraded_penal_capital = yes
@@ -74,6 +75,7 @@ has_upgraded_capital = {
 }
 
 has_major_upgraded_capital = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = penal_colony }
 		has_major_upgraded_penal_capital = yes
@@ -138,6 +140,7 @@ has_major_upgraded_capital = {
 }
 
 has_fully_upgraded_capital = {
+	optimize_memory
 	if = {
 		limit = { has_modifier = penal_colony }
 		has_fully_upgraded_penal_capital = yes
