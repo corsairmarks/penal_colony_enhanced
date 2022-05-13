@@ -68,28 +68,14 @@ warden = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 4
 		planet_stability_add = 2.5
 		pop_cat_inmate_happiness = -0.1
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			planet_amenities_add = 0.8
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = { has_trait = trait_repugnant }
-		modifier = {
-			planet_amenities_add = -0.8
-		}
+		potential = { always = yes }
+		planet_amenities_add = 4
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_planet_modifier = {
@@ -105,22 +91,11 @@ warden = {
 
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|warden|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 0.65
+			factor = 1.25
 			has_trait = trait_presapient_proles
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_psionic
 		}
 		modifier = {
 			factor = 2
@@ -164,52 +139,12 @@ warden = {
 			has_trait = trait_limited_regeneration
 		}
 		modifier = {
-			factor = 1.1
-			has_trait = trait_brainslug
-			exists = owner
-		}
-		modifier = {
-			factor = 1.05
-			has_trait = trait_presapient_natural_intellectuals
-			exists = owner
-		}
-		modifier = {
-			factor = 20
-			has_job = warden
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_propaganda_machines
-				has_trait = trait_traditional
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_quarrelsome
-		}
-		modifier = {
 			factor = 2
 			has_trait = trait_lithoid
 		}
 		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
+			set = 0
+			species = { can_be_soldier = no }
 		}
 	}
 }
