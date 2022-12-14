@@ -38,7 +38,7 @@ And finally it overrides the `planet_jobs` (Jobs) economic category in order to 
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
 
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 ### When to Install
 
@@ -49,12 +49,12 @@ This mod can be safely added to your savegame after the game has started, but no
 Overriding game elements causes the game to log errors, so expect to see six lines in the error.log file similar to:
 
 ```
-[16:45:28][game_singleobjectdatabase.h:147]: Object with key: planet_jobs already exists, using the one at  file: common/economic_categories/01_penal_colony_enhanced_categories.txt line: 8
-[16:45:30][game_singleobjectdatabase.h:147]: Object with key: col_penal already exists, using the one at  file: common/colony_types/01_penal_colony_enhanced_colony_types_overrides.txt line: 1
-[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 2
-[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_major_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 76
-[16:45:31][game_singleobjectdatabase.h:147]: Object with key: has_fully_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_overrides.txt line: 140
-[16:45:31][game_singleobjectdatabase.h:147]: Object with key: decision_penal_colony already exists, using the one at  file: common/decisions/03_penal_colony_enhanced_special_decisions_overrides.txt line: 1
+[18:22:55][game_singleobjectdatabase.h:165]: Object with key: planet_jobs already exists, using the one at  file: common/economic_categories/10_penal_colony_enhanced_category_overrides.txt line: 1
+[18:22:57][game_singleobjectdatabase.h:165]: Object with key: col_penal already exists, using the one at  file: common/colony_types/01_penal_colony_enhanced_colony_types_overrides.txt line: 1
+[18:22:58][game_singleobjectdatabase.h:165]: Object with key: has_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_buildings_overrides.txt line: 2
+[18:22:58][game_singleobjectdatabase.h:165]: Object with key: has_major_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_buildings_overrides.txt line: 77
+[18:22:58][game_singleobjectdatabase.h:165]: Object with key: has_fully_upgraded_capital already exists, using the one at  file: common/scripted_triggers/02_penal_colony_enhanced_scripted_trigger_buildings_overrides.txt line: 142
+[18:23:00][game_singleobjectdatabase.h:165]: Object with key: decision_penal_colony already exists, using the one at  file: common/decisions/03_penal_colony_enhanced_special_decisions_overrides.txt line: 1
 ```
 
 ## Changelog
@@ -77,6 +77,13 @@ Overriding game elements causes the game to log errors, so expect to see six lin
     * Update the overridden economic category `planet_jobs` with underlying changes from 3.4
     * Update Warden job weights to use the new weighting system and amenity production system
     * Apply memory optimizations to effects and triggers
+* 4.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Update the pop category `inmate` to use the the new inline scripts and account for new sources of growth/upkeep/production
+    * Update penal capitol buildings with new cybernetic tradition and federation effects (added in 3.6 to other capitols)
+    * Update the overridden economic category `planet_jobs` with underlying changes from 3.5/3.6
+    * Update Warden job to attract species with the new army-boosting traits
+    * Restrict the AI from creating a Penal Colony until it has at least 5 worlds
+    * AI is more inclined to choose lower-habitability worlds as Penal Colonies
 
 ## Source Code
 
