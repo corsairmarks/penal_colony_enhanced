@@ -20,6 +20,10 @@ decision_penal_colony = {
 			is_regular_empire = yes
 			is_fallen_empire = no
 			NOT = { any_owned_planet = { has_modifier = penal_colony } }
+			OR = {
+				is_ai = no
+				num_owned_planets > 5
+			}
 		}
 	}
 	allow = {
@@ -46,9 +50,62 @@ decision_penal_colony = {
 			owner = { is_authoritarian = yes }
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			exists = owner
 			owner = { is_egalitarian = yes }
+		}
+		modifier = {
+			factor = 2
+			is_planet_class = pc_nuked
+			exists = owner
+			owner = {
+				NOR = {
+					ideal_planet_class = pc_nuked
+					has_trait = trait_pc_nuked_preference
+					has_trait = trait_survivor
+					has_trait = trait_plantoid_radiotrophic
+					has_trait = trait_harvested_radiotrophic
+					has_trait = trait_lithoid_radiotrophic
+					has_trait = trait_advanced_radiotrophic
+					has_trait = trait_presapient_irradiated
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_modifier = bleak_planet
+		}
+		modifier = {
+			factor = 0.1
+			exists = owner
+			habitability = {
+				who = owner_main_species
+				value >= 0.8
+			}
+		}
+		modifier = {
+			factor = 0.4
+			exists = owner
+			habitability = {
+				who = owner_main_species
+				value < 0.8
+			}
+			habitability = {
+				who = owner_main_species
+				value >= 0.6
+			}
+		}
+		modifier = {
+			factor = 0.7
+			exists = owner
+			habitability = {
+				who = owner_main_species
+				value < 0.6
+			}
+			habitability = {
+				who = owner_main_species
+				value >= 0.4
+			}
 		}
 	}
 }
