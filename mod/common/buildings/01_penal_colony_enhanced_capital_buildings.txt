@@ -47,7 +47,7 @@ building_penal_colony_barracks = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_mechanical_empire = no }
+			owner = { NOT = { has_active_tradition = tr_synthetics_finish } }
 		}
 		job_colonist_add = 1
 	}
@@ -55,9 +55,19 @@ building_penal_colony_barracks = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		job_roboticist_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
+			has_current_purge = yes
+			growing_species = { has_trait = trait_cybernetic }
+		}
+		pop_growth_speed = 0.10
 	}
 
 	resources = {
@@ -74,14 +84,14 @@ building_penal_colony_barracks = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = no }
+			owner = { NOT = { has_active_tradition = tr_synthetics_finish } }
 		}
 		text = job_colonist_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -161,7 +171,7 @@ building_penal_colony_administration = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		job_roboticist_add = 1
 	}
@@ -222,6 +232,16 @@ building_penal_colony_administration = {
 		planet_jobs_productive_produces_mult = 0.1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
+			has_current_purge = yes
+			growing_species = { has_trait = trait_cybernetic }
+		}
+		pop_growth_speed = 0.10
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -280,7 +300,7 @@ building_penal_colony_administration = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -356,9 +376,9 @@ building_penal_colony_complex = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
-		job_roboticist_add = 2
+		job_roboticist_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -426,6 +446,24 @@ building_penal_colony_complex = {
 		planet_jobs_productive_produces_mult = 0.1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = culture_workers_1 }
+		}
+		job_culture_worker_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
+			has_current_purge = yes
+			growing_species = { has_trait = trait_cybernetic }
+		}
+		pop_growth_speed = 0.10
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -484,9 +522,16 @@ building_penal_colony_complex = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = culture_workers_1 }
+		}
+		text = job_culture_worker_effect_desc
 	}
 	triggered_desc = {
 		text = job_enforcer_effect_desc
@@ -562,9 +607,9 @@ building_penal_colony_enclave = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
-		job_roboticist_add = 3
+		job_roboticist_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -641,6 +686,24 @@ building_penal_colony_enclave = {
 		planet_jobs_productive_produces_mult = 0.1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = culture_workers_1 }
+		}
+		job_culture_worker_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
+			has_current_purge = yes
+			growing_species = { has_trait = trait_cybernetic }
+		}
+		pop_growth_speed = 0.10
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -699,9 +762,16 @@ building_penal_colony_enclave = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_mechanical_empire = yes }
+			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner.federation
+			owner.federation = { has_federation_perk = culture_workers_1 }
+		}
+		text = job_culture_worker_effect_desc
 	}
 	triggered_desc = {
 		text = job_enforcer_effect_desc
