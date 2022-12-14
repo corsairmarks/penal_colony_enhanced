@@ -143,6 +143,18 @@ warden = {
 			has_trait = trait_lithoid
 		}
 		modifier = {
+			factor = 2.25
+			has_trait = trait_noxious
+		}
+		modifier = {
+			factor = 2.25
+			has_trait = trait_drake_scaled
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_juiced_power
+		}
+		modifier = {
 			set = 0
 			species = { can_be_soldier = no }
 		}
