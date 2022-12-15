@@ -82,7 +82,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
     * Update penal capitol buildings with new cybernetic tradition and federation effects (added in 3.6 to other capitols)
     * Update the overridden economic category `planet_jobs` with underlying changes from 3.5/3.6
     * Update Warden job to attract species with the new army-boosting traits
-    * Restrict the AI from creating a Penal Colony until it has at least 5 worlds
+    * Restrict the AI from creating a Penal Colony until it has more than 5 worlds
     * AI is more inclined to choose lower-habitability worlds as Penal Colonies
 
 ## Source Code
