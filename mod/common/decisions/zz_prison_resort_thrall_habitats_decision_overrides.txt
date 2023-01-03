@@ -1,0 +1,62 @@
+decision_prison_habitat = {
+	owned_planets_only = yes
+	icon = decision_penal_colony
+	prerequisites = {
+		"tech_penal_colonies"
+	}
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+	potential = {
+		has_vp_prisonresortthrallhabitats = yes
+		is_capital = no
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		is_planet_class = pc_habitat
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire = no
+			NOT = { any_owned_planet = { has_modifier = penal_colony } }
+			OR = {
+				is_ai = no
+				num_owned_planets > 5
+			}
+		}
+	}
+	effect = {
+		add_modifier = { modifier = penal_colony }
+		hidden_effect = {
+			set_colony_type = col_penal
+			convert_capital_to_penal_capital = yes
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { has_valid_civic = civic_police_state }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
+			owner = { is_authoritarian = yes }
+		}
+		modifier = {
+			factor = 0.25
+			exists = owner
+			owner = { is_egalitarian = yes }
+		}
+	}
+}

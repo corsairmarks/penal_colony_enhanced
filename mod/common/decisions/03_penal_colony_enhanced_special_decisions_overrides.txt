@@ -40,6 +40,11 @@ decision_penal_colony = {
 	ai_weight = {
 		weight = 2
 		modifier = {
+			factor = 0.5
+			exists = owner
+			owner = { has_origin = origin_void_dwellers }
+		}
+		modifier = {
 			factor = 2
 			exists = owner
 			owner = { has_valid_civic = civic_police_state }
