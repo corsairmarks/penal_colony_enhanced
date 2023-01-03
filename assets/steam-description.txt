@@ -35,6 +35,9 @@ This mod is incompatible with other mods that want to also overwrite these same 
 
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
+[h3]Known Compatible Mods[/h3]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716]Prison, Resort and Thrall Habitats[/url] allows establishing Prison, Resort, and Thrall habitats. Combined with this mod, you will have Warden jobs available for your Prison Habitat capitol buildings.
+
 [h3]When to Install[/h3]
 This mod can be safely added to your savegame after the game has started, but not removed.  Because this mod adds buildings and a job, removing it could result in problems when the game cannot find an expected building definition or finds Pops assigned to a job that no longer exists.  Back up your savegame before trying to remove a mod.
 
