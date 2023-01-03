@@ -26,6 +26,19 @@ convert_capital_to_penal_capital = {
 		remove_building = building_imperial_capital
 		add_building = building_penal_colony_enclave
 	}
+	else_if = {
+		limit = { has_vp_prisonresortthrallhabitats = yes }
+		if = {
+			limit = { has_building = building_hab_capital }
+			remove_building = building_hab_capital
+			add_building = building_penal_habitat_administration
+		}
+		else_if = {
+			limit = { has_building = building_hab_major_capital }
+			remove_building = building_hab_major_capital
+			add_building = building_penal_habitat_complex
+		}
+	}
 }
 
 # this = country
