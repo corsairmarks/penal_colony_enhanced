@@ -16,7 +16,7 @@ warden = {
 		hidden_trigger = {
 			exists = owner
 			OR = {
-				is_robotic = no
+				is_robotic_species = no
 				owner = { has_technology = tech_synthetic_workers }
 			}
 		}
