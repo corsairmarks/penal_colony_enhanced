@@ -10,6 +10,9 @@ decision_prison_habitat = {
 			unity = 1000
 		}
 	}
+	show_tech_unlock_if = {
+		has_vp_prisonresortthrallhabitats = yes
+	}
 	potential = {
 		has_vp_prisonresortthrallhabitats = yes
 		is_capital = no
