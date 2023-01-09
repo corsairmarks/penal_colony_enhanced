@@ -90,6 +90,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
     * AI is more inclined to choose lower-habitability worlds as Penal Colonies
 * 4.1.0 Add compatibility with [Prison, Resort and Thrall Habitats](https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716)
     * Add new penal habitat capital buildings
+* 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 
 ## Source Code
 
