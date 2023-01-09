@@ -1,29 +1,17 @@
 namespace = penal_colony_enhanced
 
-# flag mod as active
-event = {
-	id = penal_colony_enhanced.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = { has_global_flag = penal_colony_enhanced_installed }
-	}
-	immediate = {
-		set_global_flag = penal_colony_enhanced_installed
-	}
-}
-
 # triggered by on_single_player_save_game_load
 event = {
 	id = penal_colony_enhanced.1
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		NOT = { has_global_flag = penal_colony_enhanced_installed }
+		NOT = { has_global_flag = penal_colony_enhanced_initial_config }
 	}
 	immediate = {
 		every_galaxy_planet = {
 			limit = {
+				is_colony = yes
 				OR = {
 					has_modifier = penal_colony
 					has_designation = col_penal
@@ -31,6 +19,7 @@ event = {
 			}
 			convert_capital_to_penal_capital = yes
 		}
+		set_global_flag = penal_colony_enhanced_initial_config
 	}
 }
 
