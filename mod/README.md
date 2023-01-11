@@ -40,13 +40,13 @@ This mod is incompatible with other mods that want to also overwrite these same 
 
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
-### Known Compatible Mods
-
-[Prison, Resort and Thrall Habitats](https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716) allows establishing Prison, Resort, and Thrall habitats.
-
 ### When to Install
 
 This mod can be safely added to your savegame after the game has started, but not removed.  Because this mod adds buildings and a job, removing it could result in problems when the game cannot find an expected building definition or finds Pops assigned to a job that no longer exists.  Back up your savegame before trying to remove a mod.
+
+### Known Compatible Mods
+
+[Prison, Resort and Thrall Habitats](https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716) allows establishing Prison, Resort, and Thrall habitats.
 
 ## Known Issues
 
