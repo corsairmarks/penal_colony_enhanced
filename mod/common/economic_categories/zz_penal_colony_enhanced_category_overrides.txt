@@ -199,4 +199,7 @@ planet_jobs = {
 			is_pop_category = inmate
 		}
 	}
+
+	# this overwrite conflicts with PD: Unique Worlds, but that mod defines planet_pops_biosynth twice - and the correct parent is planet_pops, not planet_jobs
+	# PD: Unique Worlds still functions as intended (-10% bio-synth upkeep) with only the planet_pops overwrite
 }
