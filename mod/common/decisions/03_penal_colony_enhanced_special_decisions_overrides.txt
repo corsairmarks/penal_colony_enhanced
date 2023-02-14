@@ -16,6 +16,7 @@ decision_penal_colony = {
 			has_modifier = slave_colony
 		}
 		is_artificial = no
+		is_pd_habitat = no
 		owner = {
 			is_regular_empire = yes
 			is_fallen_empire = no
