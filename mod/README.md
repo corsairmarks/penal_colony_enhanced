@@ -36,7 +36,7 @@ And it overrides three scripted triggers related to capitol buildings:
 
 And finally it overrides the `planet_jobs` (Jobs) economic category in order to create multipliers for inmate production.
 
-This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.
+This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.  This mod has built-in compatibility with [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835).
 
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
@@ -91,6 +91,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
 * 4.1.0 Add compatibility with [Prison, Resort and Thrall Habitats](https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716)
     * Add new penal habitat capital buildings
 * 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
+* 5.1.0 Add built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 
 ## Source Code
 
