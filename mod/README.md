@@ -92,6 +92,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
     * Add new penal habitat capital buildings
 * 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 * 5.1.0 Add built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
+* 5.1.1 Rename a file to load in the correct order when used with Planetary Diversity - special thanks to [Mister Handmann](https://steamcommunity.com/profiles/76561198392639820/myworkshopfiles/?appid=281990) (aka Mr. Money)
 
 ## Source Code
 
