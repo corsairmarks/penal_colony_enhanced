@@ -64,18 +64,7 @@ decision_penal_colony = {
 			factor = 2
 			is_planet_class = pc_nuked
 			exists = owner
-			owner = {
-				NOR = {
-					ideal_planet_class = pc_nuked
-					has_trait = trait_pc_nuked_preference
-					has_trait = trait_survivor
-					has_trait = trait_plantoid_radiotrophic
-					has_trait = trait_harvested_radiotrophic
-					has_trait = trait_lithoid_radiotrophic
-					has_trait = trait_advanced_radiotrophic
-					has_trait = trait_presapient_irradiated
-				}
-			}
+			owner = { pce_is_nuked_species = no }
 		}
 		modifier = {
 			factor = 1.5

@@ -69,16 +69,7 @@ inmate = {
 	}
 	triggered_pop_modifier = {
 		potential = {
-			NOR = {
-				ideal_planet_class = pc_nuked
-				has_trait = trait_pc_nuked_preference
-				has_trait = trait_survivor
-				has_trait = trait_plantoid_radiotrophic
-				has_trait = trait_harvested_radiotrophic
-				has_trait = trait_lithoid_radiotrophic
-				has_trait = trait_advanced_radiotrophic
-				has_trait = trait_presapient_irradiated
-			}
+			pce_is_nuked_species = no
 			exists = planet
 			planet = { is_planet_class = pc_nuked }
 		}
