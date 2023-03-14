@@ -38,7 +38,7 @@ And finally it overrides the `planet_jobs` (Jobs) economic category in order to 
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.  This mod has built-in compatibility with [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835).
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 ### When to Install
 
@@ -93,6 +93,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
 * 5.0.0 Add a compatibility trigger for other mods to check whether this one is active, remove old compatibility global flag
 * 5.1.0 Add built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 * 5.1.1 Rename a file to load in the correct order when used with Planetary Diversity - special thanks to [Mister Handmann](https://steamcommunity.com/profiles/76561198392639820/myworkshopfiles/?appid=281990) (aka Mr. Money)
+* 5.2.0 Flagged as compatible with Stellaris version 3.7 "Canis Minor" - no script changes
 
 ## Source Code
 
