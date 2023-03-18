@@ -8,6 +8,8 @@
  building_penal_colony_complex_desc: "A sprawling complex of fortified structures that acts as the administrative center, staff living space, and sole spaceport for a major penal colony."
  building_penal_colony_enclave: "Penal Colony Administrative Enclave"
  building_penal_colony_enclave_desc: "A towering configuration of bleak, fortified bureaus and hardened infrastructure. The interior of the enclave rivals bustling spaceport cities on free worlds, while outside its walls criminals are organized into strict labor corps."
+ building_penal_colony_citadel: "Penal Colony Administrative Citadel"
+ building_penal_colony_citadel_desc: "$building_penal_colony_citadel$"
  building_penal_habitat_administration: "$building_penal_colony_administration$"
  building_penal_habitat_administration_desc: "$building_penal_colony_administration_desc$"
  building_penal_habitat_complex: "$building_penal_colony_complex$"
