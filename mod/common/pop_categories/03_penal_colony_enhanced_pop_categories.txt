@@ -71,7 +71,12 @@ inmate = {
 		potential = {
 			pce_is_nuked_species = no
 			exists = planet
-			planet = { is_planet_class = pc_nuked }
+			planet = {
+				OR = {
+					is_planet_class = pc_nuked
+					is_pd_nuked = yes
+				}
+			}
 		}
 		pop_happiness = -0.05
 	}

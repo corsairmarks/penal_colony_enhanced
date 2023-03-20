@@ -5,9 +5,17 @@ has_vp_prisonresortthrallhabitats = {
 	always = no
 }
 
-# supports Planetary Diversity: https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+## Planetary Diversity ##
+# https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
+
 # this = planet
 is_pd_habitat = {
+	optimize_memory
+	always = no
+}
+
+# this = planet
+is_pd_nuked = {
 	optimize_memory
 	always = no
 }

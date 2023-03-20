@@ -62,7 +62,10 @@ decision_penal_colony = {
 		}
 		modifier = {
 			factor = 2
-			is_planet_class = pc_nuked
+			OR = {
+				is_planet_class = pc_nuked
+				is_pd_nuked = yes
+			}
 			exists = owner
 			owner = { pce_is_nuked_species = no }
 		}
