@@ -95,6 +95,7 @@ Overriding game elements causes the game to log errors, so expect to see six lin
 * 5.1.1 Rename a file to load in the correct order when used with Planetary Diversity - special thanks to [Mister Handmann](https://steamcommunity.com/profiles/76561198392639820/myworkshopfiles/?appid=281990) (aka Mr. Money)
 * 5.2.0 Flagged as compatible with Stellaris version 3.7 "Canis Minor" - no script changes
 * 5.3.0 Add additional assets for use by mods that want to add another tier of Penal Colony capital building
+* 5.4.0 Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
 
 ## Source Code
 
