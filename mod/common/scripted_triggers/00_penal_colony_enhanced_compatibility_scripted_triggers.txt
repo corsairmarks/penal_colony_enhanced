@@ -1,3 +1,5 @@
+# Irony this is a placeholder file please ignore it
+
 # supports Prison, Resort and Thrall Habitats: https://steamcommunity.com/sharedfiles/filedetails/?id=2905474716
 # this = any
 has_vp_prisonresortthrallhabitats = {
@@ -5,7 +7,7 @@ has_vp_prisonresortthrallhabitats = {
 	always = no
 }
 
-## Planetary Diversity ##
+### Planetary Diversity ###
 # https://steamcommunity.com/sharedfiles/filedetails/?id=819148835
 
 # this = planet
