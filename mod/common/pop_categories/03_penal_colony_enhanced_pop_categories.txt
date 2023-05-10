@@ -183,7 +183,16 @@ inmate = {
 			alloys = @drake_scaled_trait_resource_production
 		}
 
-		# Police State Production
+		# Civic: Oppressive Autocracy Production
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_dystopian_society }
+			}
+			unity = 1
+		}
+
+		# Civic: Police State Production
 		produces = {
 			trigger = {
 				exists = owner
