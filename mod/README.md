@@ -4,7 +4,7 @@ Have you ever wondered why Resort Colonies are perfectly useful on Tomb Worlds b
 
 # Changes
 
-Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a Penal Colony.  This new stratum acts similarly to slave - Pops demote instantly, they have +10% productive job output, and they have a significant happiness penalty (-25%).  In addition they have a -90% penalty to research point output to represent the lack of off-world communication as well as tight control of any information they do receive.  Inmates have very little political power and their unhappiness won't significantly impact the happiness of non-Inmate Pops on the planet (ruler-strata Pops, enforcers, telepaths, and soldiers - the Inmates can't be trusted to supervise _themselves_).  Should you also have the Police State civic, each Inmate produces bonus Unity.  Regardless, Inmates generate crime - which is doubled when unemployed.
+Adds a new pop stratum "Inmate" that is automatically assigned to most Pops on a Penal Colony.  This new stratum acts similarly to slave - Pops demote instantly, they have +10% productive job output, and they have a significant happiness penalty (-25%).  In addition they have a -90% penalty to research point output to represent the lack of off-world communication as well as tight control of any information they do receive.  Inmates have very little political power and their unhappiness won't significantly impact the happiness of non-Inmate Pops on the planet (ruler-strata Pops, enforcers, telepaths, and soldiers - the Inmates can't be trusted to supervise _themselves_).  Should you also have the Civic: Police State or Civic: Oppressive Autocracy, each Inmate produces bonus Unity (more with both civics).  Regardless, Inmates generate crime - which is doubled when unemployed.
 
 The Penal Colony planet designation has been altered to +1 Criminal job per 10 Pops - some of the convicts in the planet-wide prison system manage to escape supervision.  To compensate, Penal Colonies gain bonus stability that scales compared to how _unhappy_ Inmate Pops are.
 
@@ -38,7 +38,7 @@ And finally it overrides the `planet_jobs` (Jobs) economic category in order to 
 
 This mod is incompatible with other mods that want to also overwrite these same game objects.  It works with other mods that alter built-in buildings or jobs - the new capitol building is implemented without any building file overwrites.  If other mods also attempt to change the script for checking whether advanced buildings are allowed to be constructed, a compatibility patch should be straightforward.  This mod has built-in compatibility with [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835).
 
-Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
+Built for Stellaris version 3.8 "Gemini."  Not compatible with achievements.
 
 ### When to Install
 
@@ -96,6 +96,9 @@ Overriding game elements causes the game to log errors, so expect to see six lin
 * 5.2.0 Flagged as compatible with Stellaris version 3.7 "Canis Minor" - no script changes
 * 5.3.0 Add additional assets for use by mods that want to add another tier of Penal Colony capital building
 * 5.4.0 Improve built-in support for [Planetary Diversity](https://steamcommunity.com/sharedfiles/filedetails/?id=819148835)
+* 6.0.0 Update for Stellaris version 3.8 "Gemini"
+    * Integrate underlying game changes
+    * Civic: Oppressive Autocracy also generates bonus unity from Inmates
 
 ## Source Code
 
