@@ -54,6 +54,11 @@ decision_prison_habitat = {
 		modifier = {
 			factor = 2
 			exists = owner
+			owner = { has_valid_civic = civic_dystopian_society }
+		}
+		modifier = {
+			factor = 2
+			exists = owner
 			owner = { is_authoritarian = yes }
 		}
 		modifier = {
